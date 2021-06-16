@@ -1,5 +1,5 @@
 {
-  "name": "react-native-tab-view",
+  "name": "react-native-tab-view-custom",
   "version": "3.0.1",
   "description": "Tab view component for React Native",
   "main": "lib/commonjs/index.js",
@@ -35,12 +35,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/satya164/react-native-tab-view.git"
+    "url": "git+https://github.com/Hiraki99/react-native-tab-view"
   },
-  "author": "Satyajit Sahoo <satyajit.happy@gmail.com> (https://github.com/satya164/)",
+  "author": "Hiraki",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/satya164/react-native-tab-view/issues"
+    "url": "https://github.com/Hiraki99/react-native-tab-view/issues"
   },
   "homepage": "https://github.com/satya164/react-native-tab-view#readme",
   "devDependencies": {
@@ -55,7 +55,6 @@
     "eslint": "^7.23.0",
     "eslint-config-satya164": "^3.1.10",
     "eslint-plugin-react-native-globals": "^0.1.2",
-    "husky": "^4.2.5",
     "jest": "^26.2.2",
     "prettier": "^2.0.5",
     "react": "~16.13.1",

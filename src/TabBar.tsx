@@ -54,6 +54,7 @@ export type Props<T extends Route> = SceneRendererProps & {
   onTabPress?: (scene: Scene<T> & Event) => void;
   onTabLongPress?: (scene: Scene<T>) => void;
   tabStyle?: StyleProp<ViewStyle>;
+  tabActiveStyle?: StyleProp<ViewStyle>;
   indicatorStyle?: StyleProp<ViewStyle>;
   indicatorContainerStyle?: StyleProp<ViewStyle>;
   labelStyle?: StyleProp<TextStyle>;
@@ -295,6 +296,7 @@ export default class TabBar<T extends Route> extends React.Component<
       onTabPress,
       onTabLongPress,
       tabStyle,
+      tabActiveStyle,
       labelStyle,
       indicatorStyle,
       contentContainerStyle,
@@ -436,6 +438,7 @@ export default class TabBar<T extends Route> extends React.Component<
                 onLongPress: () => onTabLongPress?.({ route }),
                 labelStyle: labelStyle,
                 style: tabStyle,
+                tabActiveStyle,
               };
 
               return renderTabBarItem ? (

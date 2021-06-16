@@ -39,6 +39,7 @@ export type Props<T extends Route> = {
   onLongPress: () => void;
   labelStyle?: StyleProp<TextStyle>;
   style: StyleProp<ViewStyle>;
+  tabActiveStyle: StyleProp<ViewStyle>;
 };
 
 const DEFAULT_ACTIVE_COLOR = 'rgba(255, 255, 255, 1)';
@@ -102,6 +103,7 @@ export default class TabBarItem<T extends Route> extends React.Component<
       onLayout,
       onPress,
       onLongPress,
+      tabActiveStyle,
     } = this.props;
 
     const tabIndex = navigationState.routes.indexOf(route);
@@ -232,7 +234,10 @@ export default class TabBarItem<T extends Route> extends React.Component<
         onLongPress={onLongPress}
         style={tabContainerStyle}
       >
-        <View pointerEvents="none" style={[styles.item, tabStyle]}>
+        <View
+          pointerEvents="none"
+          style={[styles.item, tabStyle, isFocused ? tabActiveStyle : null]}
+        >
           {icon}
           {label}
           {badge != null ? <View style={styles.badge}>{badge}</View> : null}
